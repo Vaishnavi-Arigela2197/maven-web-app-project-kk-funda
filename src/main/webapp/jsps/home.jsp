@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to VAISH</h1>
-<h1 align="center"> Build periodically </h1>
+<h1 align="center"> Git webhook </h1>
 <hr>
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
