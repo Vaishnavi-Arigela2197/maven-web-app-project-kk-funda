@@ -64,7 +64,7 @@ def colorName = 'RED'
 
   // Send notifications
   slackSend (color: colorCode, message: summary)
-}
+
 
 
 
