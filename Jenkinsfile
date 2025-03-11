@@ -43,7 +43,7 @@ node {
     }
   }
 
-  def notifyBuild(string buildStatus = 'STARTED') {
+  def notifyBuild(String buildStatus = 'STARTED') {
   buildStatus = buildStatus ?: 'SUCCESS'
 
   def colorName = 'RED'
