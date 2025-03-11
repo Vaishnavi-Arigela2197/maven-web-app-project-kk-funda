@@ -1,4 +1,4 @@
-node{
+node {
 
     echo "git job name: ${env.JOB_NAME}"
     echo "build number is: ${env.BUILD_NUMBER}"
@@ -6,7 +6,7 @@ node{
     echo "branch name is: ${env.BRANCH_NAME}"
     
     def mavenHome = tool name: "maven3.9.9"
-    try{
+    try {
        notifyBuild('STARTED') 
     stage('Git checkout')
     {
@@ -41,11 +41,12 @@ node{
     finally {
         notifyBuild(currentBuild.result)
     }
-}
-def notifyBuild(string buildStatus = 'STARTED'){
-buildStatus = buildStatus ?: 'SUCCESS'
+  }
 
-def colorName = 'RED'
+  def notifyBuild(string buildStatus = 'STARTED') {
+  buildStatus = buildStatus ?: 'SUCCESS'
+
+  def colorName = 'RED'
   def colorCode = '#FF0000'
   def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}] [${env.BRANCH_NAME}]'"
   def summary = "${subject} (${env.BUILD_URL})" 
