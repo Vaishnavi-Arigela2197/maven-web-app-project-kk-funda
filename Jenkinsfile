@@ -42,7 +42,7 @@ node{
         notifyBuild(currentBuild.result)
     }
 }
-def notifyBuild(string buildStatus = 'STARTED')
+def notifyBuild(string buildStatus = 'STARTED'){
 buildStatus = buildStatus ?: 'SUCCESS'
 
 def colorName = 'RED'
@@ -65,7 +65,7 @@ def colorName = 'RED'
   // Send notifications
   slackSend (color: colorCode, message: summary)
 
-
+}
 
 
 
